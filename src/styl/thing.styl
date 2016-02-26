@@ -1,0 +1,114 @@
+/*
+ * Config
+ */
+border-radius()
+    -webkit-border-radius: arguments
+    -moz-border-radius: arguments
+    border-radius: arguments
+
+$a = #a3a3a3
+$b = #e0dfcb
+$c = #f1d9d2
+$d = #d190b6
+
+/*
+ * Thing styles
+ */
+.item-body h2
+    // font-size 1.2em
+    // line-height 1.2em
+    // font-style bold
+    margin 15px 0px 10px
+
+#map
+    width: 100%
+
+svg
+    background-color: $qz-map-water
+
+.borders path
+    stroke: $qz-map-land-stroke
+    stroke-width: 1px
+    fill: $qz-map-land-fill
+
+    &.a
+        fill: $a
+
+    &.b
+        fill: $b
+
+    &.c
+        fill: $c
+
+    &.d
+        fill: $d
+
+ul#legend
+    padding: 0
+    padding 10px 0
+    list-style-type: none
+
+    li
+        display: inline-block
+        margin: 0 18px 0 0
+        padding: 0
+        line-height: 18px
+
+        b
+            display: inline-block
+            width: 18px
+            height: 18px
+            margin-right: 6px
+            float: left
+            border: 1px solid $qz-map-land-stroke
+
+        div
+            whitespace: nowrap
+            fill: $qz-gray-2
+            font-size: 16px
+            font-family: 'AdelleSans-Regular', Helvetica, Arial, sans-serif
+            float: left;
+
+        &.a b
+            background-color: $a
+
+        &.b b
+            background-color: $b
+
+        &.c b
+            background-color: $c
+
+        &.d b
+            background-color: $d
+
+        &.other b
+            background-color: $qz-map-land-fill
+
+div.clear
+    clear: both
+
+/*
+ * Media queries
+ */
+@media screen and (max-width: 600px)
+    .item-body h2
+        font-size 14px
+        //
+        // ul#legend
+        //   li
+        //     margin: 0 12px 0 0
+        //     line-height: 9px
+        //
+        //     b
+        //       width: 9px;
+        //       height: 9px;
+        //       margin-right: 4px
+        //
+        //     div
+        //       font-size: 9px
+
+    .borders path
+        stroke-width: 0.5px
+
+    #footer
+        font-size: 60%
